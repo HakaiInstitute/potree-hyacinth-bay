@@ -47,7 +47,6 @@
 		viewer.useHQ = true;
 		viewer.loadSettingsFromURL();
 
-		viewer.setDescription("Loading COPC format");
 
 		viewer.loadGUI(() => {
 			viewer.setLanguage('en');
@@ -56,6 +55,7 @@
 
         var path = "./pointclouds/colorized_092K031213_v3.copc.laz";
 		var name = "NC50 BasinView";
+		viewer.setDescription(name);
 
 		var getQueryParam = function(name) {
 			name = name.replace(/[\[\]]/g, "\\$&");
