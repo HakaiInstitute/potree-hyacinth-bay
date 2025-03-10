@@ -164,7 +164,7 @@ gulp.task("shaders", async function(){
 
 gulp.task('build', 
 	gulp.series(
-		gulp.parallel("workers", "lazylibs", "shaders", "icons_viewer", "examples_page"),
+		gulp.parallel("workers", "lazylibs", "shaders", "icons_viewer"),
 		async function(done){
 			gulp.src(paths.html).pipe(gulp.dest('build/potree'));
 
@@ -194,7 +194,6 @@ gulp.task('watch', gulp.parallel("build", "pack", "webserver", async function() 
 		'src/**/*.vs',
 		'src/**/*.fs',
 		'resources/**/*',
-		'examples//**/*.json',
 		'!resources/icons/index.html',
 	];
 
